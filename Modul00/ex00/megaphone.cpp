@@ -10,12 +10,11 @@ int main(int argc, char **argv)
     {
         for(int i = 1; argv[i]; i++)
         {
-            if (i > 1)
-                std::cout<< ' ';
             for (int j = 0; argv[i][j] != '\0'; j++)
             {
                 std::cout<< (char) toupper(argv[i][j]);
             }
+
         }
         std::cout << std::endl;
     }

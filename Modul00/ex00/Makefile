@@ -7,14 +7,14 @@ RM		= rm -rf
 
 all: $(NAME)
 
-$(NAME): 
-	@ $(CC) $(FLAGS) megaphone.cpp -o $(NAME)
+$(NAME): megaphone.o
+	$(CC) $(FLAGS) megaphone.cpp -o $(NAME)
 
 clean:
-	@$(RM) megaphone.o
+	$(RM) megaphone.o
 
 fclean: clean
-	@$(RM) $(NAME)
+	$(RM) $(NAME)
 
 re: fclean all
 
