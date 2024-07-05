@@ -125,9 +125,19 @@ void    Phonebook::ft_display_contact()
     for (int i = 0; i < 8; i++)
     {
         std::cout << '|' << std::setw(10) << i;
-        std::cout << '|' << std::setw(10) << _contacts[i].get_first_name();
-        std::cout << '|' << std::setw(10) << _contacts[i].get_last_name();
-        std::cout << '|' << std::setw(10) << _contacts[i].get_nickename();
+        std::cout << '|' << std::setw(10) << truncated_info(_contacts[i].get_first_name(), 10);
+        std::cout << '|' << std::setw(10) << truncated_info(_contacts[i].get_last_name(), 10);
+        std::cout << '|' << std::setw(10) << truncated_info(_contacts[i].get_nickename(), 10);
         std::cout << '|' << std::endl;
     }
+}
+
+std::string	Phonebook::truncated_info(std::string str, unsigned long max)
+{
+	if (str.size() > max - 1)
+	{
+		str.resize(max);
+		str[max - 1] = '.';
+	}
+	return (str);
 }

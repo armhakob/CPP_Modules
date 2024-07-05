@@ -16,6 +16,7 @@ public:
     void    add_contact();
     void    search_contact();
     void    ft_display_contact();
+    std::string	truncated_info(std::string str, unsigned long max);
 };
 
 #endif

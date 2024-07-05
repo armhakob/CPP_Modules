@@ -7,8 +7,8 @@ int main()
 
     while (1) {
         std::cout << "|---------               📞📔                   --------|" << std::endl;
-        std::cout << "|                        ➕:ADD                          |" << std::endl;
-        std::cout << "|                        🔎:SEARCH                       |" << std::endl;
+        std::cout << "|                        ➕:ADD                         |" << std::endl;
+        std::cout << "|                        🔎:SEARCH                      |" << std::endl;
         std::cout << "|                        ⬅️:EXIT                         |" << std::endl;
         std::cout << "|-------------------------------------------------------|" << std::endl;
         std::cout << "Enter a command: ";
