@@ -28,8 +28,6 @@ void Phonebook::add_contact()
         getline(std::cin, first_name);
         if (std::cin.eof())
 		    exit(1);
-        if (first_name.empty())
-            std::cout << "INVALID INPUT: please enter non empty name!" << std::endl;
         if (_contacts[_index % 8].set_first_name(first_name) == 1)
         {
             std::cout << "INVALID INPUT: please enter a valid name!" << std::endl;
@@ -44,8 +42,6 @@ void Phonebook::add_contact()
         getline(std::cin, last_name);
         if (std::cin.eof())
 		    exit(1);
-        if (last_name.empty())
-            std::cout << "INVALID INPUT: please enter non empty name!" << std::endl;
         if (_contacts[_index % 8].set_last_name(last_name) == 1)
         {
             std::cout << "INVALID INPUT: please enter a valid name!" << std::endl;
@@ -60,8 +56,6 @@ void Phonebook::add_contact()
         getline(std::cin, nickename);
         if (std::cin.eof())
 		    exit(1);
-        if (nickename.empty())
-            std::cout << "INVALID INPUT: please enter non empty name!" << std::endl;
         if(_contacts[_index % 8].set_nickename(nickename) == 1)
         {
             std::cout << "INVALID INPUT: please enter a valid name!" << std::endl;
@@ -76,8 +70,6 @@ void Phonebook::add_contact()
         getline(std::cin, phone_number);
         if (std::cin.eof())
 		    exit(1);
-        if (phone_number.empty())
-            std::cout << "INVALID INPUT: please enter non empty number!" << std::endl;
         if(_contacts[_index % 8].set_phone_number(phone_number) == 1)
         {
             std::cout << "INVALID INPUT: please enter a valid number!" << std::endl;
@@ -92,9 +84,11 @@ void Phonebook::add_contact()
         getline(std::cin, darkest_secret);
         if (std::cin.eof())
 		    exit(1);
-        if (darkest_secret.empty())
+        if (_contacts[_index % 8].set_darkest_secret(darkest_secret) == 1)
+		{
             std::cout << "INVALID INPUT: please enter non empty string!" << std::endl;
-        _contacts[_index % 8].set_darkest_secret(darkest_secret);
+			flag = 1;
+		}
     }
 
     this->_index++;
