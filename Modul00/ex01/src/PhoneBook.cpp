@@ -26,6 +26,8 @@ void Phonebook::add_contact()
         flag = 0;
         std::cout << "First name: ";
         getline(std::cin, first_name);
+        if (std::cin.eof())
+		    exit(1);
         if (first_name.empty())
             std::cout << "INVALID INPUT: please enter non empty name!" << std::endl;
         if (_contacts[_index % 8].set_first_name(first_name) == 1)
@@ -40,6 +42,8 @@ void Phonebook::add_contact()
         flag = 0;
         std::cout << "Last name: " ;
         getline(std::cin, last_name);
+        if (std::cin.eof())
+		    exit(1);
         if (last_name.empty())
             std::cout << "INVALID INPUT: please enter non empty name!" << std::endl;
         if (_contacts[_index % 8].set_last_name(last_name) == 1)
@@ -54,6 +58,8 @@ void Phonebook::add_contact()
         flag  = 0;
         std::cout << "Nickname: ";
         getline(std::cin, nickename);
+        if (std::cin.eof())
+		    exit(1);
         if (nickename.empty())
             std::cout << "INVALID INPUT: please enter non empty name!" << std::endl;
         if(_contacts[_index % 8].set_nickename(nickename) == 1)
@@ -68,6 +74,8 @@ void Phonebook::add_contact()
         flag = 0;
         std::cout << "Phone number: ";
         getline(std::cin, phone_number);
+        if (std::cin.eof())
+		    exit(1);
         if (phone_number.empty())
             std::cout << "INVALID INPUT: please enter non empty number!" << std::endl;
         if(_contacts[_index % 8].set_phone_number(phone_number) == 1)
@@ -82,6 +90,8 @@ void Phonebook::add_contact()
         flag = 0;
         std::cout << "Darkest secret: ";
         getline(std::cin, darkest_secret);
+        if (std::cin.eof())
+		    exit(1);
         if (darkest_secret.empty())
             std::cout << "INVALID INPUT: please enter non empty string!" << std::endl;
         _contacts[_index % 8].set_darkest_secret(darkest_secret);
@@ -100,6 +110,8 @@ void    Phonebook::search_contact()
     std::cout << "Enter the contact index: " << std::endl;
     std::cout << "> ";
     std::cin >> s;
+    if (std::cin.eof())
+		    exit(1);
     index_search = atoi(s.c_str());
     if (std::cin.fail() || (index_search < 0) || (index_search > 7) || s.length() > 1)
         std::cout << "Invalid input!" << std::endl;
