@@ -1,6 +1,6 @@
 #include "ZombieHorde.hpp"
 
-int main(void)
+int master(void)
 {
     Zombie	*horde;
 	int		zombieAmount = 10;
@@ -12,5 +12,11 @@ int main(void)
 		horde[i].announce();
 	delete[] horde;
 	horde = zombieHorde(0, "Failed");
+	delete[] horde;
 	return (EXIT_SUCCESS);
+}
+
+int main(void) {
+	master();
+	// system("leaks zombieHorde");
 }
