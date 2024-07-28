@@ -1,4 +1,4 @@
-NAME		= clapTrap
+NAME		= diamondTrap
 SRC_DIR 	= src
 SRC 		= $(wildcard $(SRC_DIR)/*.cpp)
 
