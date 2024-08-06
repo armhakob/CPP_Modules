@@ -3,14 +3,14 @@
 
 # include "../incs/ClapTrap.hpp"
 
-class FragTrap : public ClapTrap
+class FragTrap : public virtual ClapTrap
 {
 	public:
 		FragTrap(void);
 		FragTrap(std::string const &name);
 		FragTrap(FragTrap const &copy);
 		FragTrap	&operator=(FragTrap const &copy);
-		~FragTrap(void);
+		virtual ~FragTrap(void);
 		void		highFivesGuys(void);
 };
 

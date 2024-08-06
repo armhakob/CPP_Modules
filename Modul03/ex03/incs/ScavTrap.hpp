@@ -3,14 +3,14 @@
 
 # include "../incs/ClapTrap.hpp"
 
-class ScavTrap : public ClapTrap
+class ScavTrap : public virtual ClapTrap
 {
 	public:
 		ScavTrap(void);
 		ScavTrap(std::string const &name);
 		ScavTrap(ScavTrap const &copy);
 		ScavTrap	&operator=(ScavTrap const &copy);
-		~ScavTrap(void);
+		virtual ~ScavTrap(void);
 		void		guardGate(void);
 		void		attack(const std::string& target);
 };
