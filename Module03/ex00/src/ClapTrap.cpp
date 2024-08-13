@@ -1,4 +1,4 @@
-#include "ClapTrap.hpp"
+#include "../incs/ClapTrap.hpp"
 
 ClapTrap::ClapTrap(void): _name("Default"), _hitP(10), _energyP(10), _damage(0)
 {
