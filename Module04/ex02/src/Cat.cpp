@@ -23,6 +23,11 @@ Cat	&Cat::operator=(Cat const &copy)
 	return (*this);
 }
 
+Brain *Cat::getBrain(void) const
+{
+	return (this->brain);
+}
+
 void	Cat::makeSound(void) const
 {
 	std::cout << "Meow🐈" << std::endl;
