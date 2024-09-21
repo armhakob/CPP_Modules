@@ -10,7 +10,7 @@ int main()
         delete rrf;
         rrf = someRandomIntern.makeForm("shrubbery creation", "Bender");
         delete rrf;
-        rrf = someRandomIntern.makeForm("shrubbery reques", "bender");
+        rrf = someRandomIntern.makeForm("shrubbery request", "bender");
         delete rrf;
     }
 }
