@@ -1,4 +1,4 @@
-NAME		= converter
+NAME		= array
 SRC_DIR 	= src
 SRC 		= $(wildcard $(SRC_DIR)/*.cpp)
 

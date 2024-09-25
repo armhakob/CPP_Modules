@@ -8,18 +8,19 @@ class Array
 {
 	private:
 		T*	data;
-		size_t	size;
+		size_t	n;
 	public:
 		Array();
 		Array(unsigned int n);
 		Array(const Array& other);
+		Array<T>& operator=(const Array<T>& other);
 		~Array();
 
-		const Array& operator=(const Array& other);
-		T& operator[](size_t i);
-		size_t size() const;
+		unsigned int size() const;
+		T& operator[](unsigned int index);
+		const T& operator[](unsigned int index) const;
 };
 
-
+# include "Array.tpp"
 
 #endif
