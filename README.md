@@ -36,6 +36,7 @@ Each module comes with detailed explanations, code examples, and exercises to he
 - **Language**: C++
 - **IDE**: Any C++ compatible IDE (e.g., Visual Studio, CLion, Code::Blocks).
 - **Compilers**: GCC, Clang, or other C++ compilers.
+- **Build System**: Makefile
 
 ## Installation
 
